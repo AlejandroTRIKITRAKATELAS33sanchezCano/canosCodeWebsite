@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { logo2 } from "../assets";
+import useMediaQuery from "../hoc/hook";
 
 const Hero = () => {
+  const isMobile = useMediaQuery(768); // Puedes ajustar el tamaño de pantalla según tus necesidades
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -20,12 +23,18 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I Develop User Interfaces <br className='sm:block hidden' />
-            Web Aplications And More
+            Web Aplications And Mobile Aplications
           </p>
         </div>
       </div>
 
-      <ComputersCanvas />
+      {isMobile ? (
+        <div className='imagenDiv'>
+          <img src={logo2} alt="" srcSet="" />
+        </div>
+      ) : (
+        <ComputersCanvas />
+      )}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

@@ -1,4 +1,5 @@
 import logo from "./Logo_Principal.png";
+import logo2  from "./Logo_Secundario.png"
 
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -51,6 +52,7 @@ import armando from "./testimonals/Armando.jpg"
 
 export {
   logo,
+  logo2,
   backend,
   creator,
   mobile,
